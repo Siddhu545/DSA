@@ -12,7 +12,7 @@ bool isValid(string s) {
         if(c == '(' || c == '{' || c == '[') {
             st.push(c);
         } else {
-            if(st.empty()) return false;  // ✅ close bracket but nothing open
+            if(st.empty()) return false; 
             char top = st.top();
             if((c == ')' && top != '(') ||
                (c == '}' && top != '{') ||
@@ -22,7 +22,7 @@ bool isValid(string s) {
             st.pop();
         }
     }
-    return st.empty();  // ✅ leftover open brackets = invalid
+    return st.empty();  
 }
 
 int main() {
